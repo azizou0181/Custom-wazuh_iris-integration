@@ -1,6 +1,7 @@
 # Custom-wazuh_iris-integration
 This script is a modified version of the [integration script discussed in Wazuh's blog](https://wazuh.com/blog/enhancing-incident-response-with-wazuh-and-dfir-iris-integration/)
- post on enhancing incident response with Wazuh and DFIR-IRIS integration. The original script fetched alerts from the alerts.json file in the Wazuh Manager. However, I have updated it to fetch alerts directly from the Wazuh Indexer API, which provides better performance and flexibility.
+ post on enhancing incident response with Wazuh and DFIR-IRIS integration. The original script fetched alerts from the alerts.json file in the Wazuh Manager. However, I have updated it to fetch alerts directly from the Wazuh Indexer API, This modification ensures that alerts are retrieved in their final form after normalization, extraction, and any modifications, providing a cleaner and more structured data set for further analysis or integration.
+
 
 The modified script queries the Wazuh Indexer to retrieve alerts based on certain criteria, such as rule level and timestamp, and then formats these alerts with additional details like rule descriptions, MITRE tactics, agent information, and more. It then forwards these alerts to DFIR-IRIS for enhanced incident response.
 
