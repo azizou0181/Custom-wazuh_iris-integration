@@ -5,10 +5,6 @@ The modified script queries the Wazuh Indexer to retrieve alerts based on certai
 
 
 
-# Project Title
-
-A brief description of what this project does and who it's for
-
 
 ## Installation and Setup
 
