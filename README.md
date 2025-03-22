@@ -102,7 +102,15 @@ payload = json.dumps({
 ```
 Make sure to replace the placeholder <IP ADDRESS> with the correct IP address of your Wazuh dashboard.
 
-4. Update the `ossec.conf` File
+4. Copy the script to `/var/ossec/integrations/custom-wazuh_iris.py` and give it the right ownership and permissions
+
+ ```bash
+cp custom-wazuh_iris.py ~/var/ossec/integrations/custom-wazuh_iris.py
+chmod 750 /var/ossec/integrations/custom-wazuh_iris.py
+chown root:wazuh /var/ossec/integrations/custom-wazuh_iris.py
+ ```
+
+5. Update the `ossec.conf` File
 Append the following configuration to the `/var/ossec/etc/ossec.conf` file to enable the integration with DFIR-IRIS:
  ```bash
  <ossec_config>
